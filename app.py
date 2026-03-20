@@ -14,7 +14,7 @@ st.set_page_config(
 )
 
 # Hard-coded API key (replace with your actual API key)
-API_KEY = "AIzaSyB38bA4GgxitJT3KiSOCzrxS26g0dHcY7M"
+API_KEY = ""
 
 # Initialize Gemini client
 @st.cache_resource
