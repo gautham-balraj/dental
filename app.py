@@ -488,7 +488,7 @@ with left:
         uploaded_file.seek(0)
         image = Image.open(uploaded_file)
         w, h = image.size
-        st.image(image, caption=f"{uploaded_file.name}  ·  {w}×{h}px", use_column_width=True)
+        st.image(image, caption=f"{uploaded_file.name}  ·  {w}×{h}px", use_container_width=True)
 
         st.markdown('<div style="height:10px"></div>', unsafe_allow_html=True)
 
