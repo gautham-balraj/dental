@@ -393,7 +393,7 @@ def analyze_dental_image(image_bytes: bytes, mime_type: str) -> tuple[str, str]:
         try:
             client = genai.Client(api_key=API_KEY)
             response = client.models.generate_content(
-                model="gemini-2.5-flash",
+                model="gemini-3.5-flash",
                 contents=[
                     types.Part.from_bytes(data=image_bytes, mime_type=mime_type),
                     ANALYSIS_PROMPT,
@@ -620,6 +620,6 @@ with right:
 st.markdown("---")
 st.markdown("""
 <div style='text-align:center;color:#2e4a62;font-size:0.75rem;padding:0.5rem 0 1rem'>
-    Dental Radiography Analysis Tool · Powered by Gemini 2.5 Flash · For clinical decision-support only · Not a substitute for professional diagnosis
+    Dental Radiography Analysis Tool · Powered by Gemini 3.5 Flash · For clinical decision-support only · Not a substitute for professional diagnosis
 </div>
 """, unsafe_allow_html=True)
